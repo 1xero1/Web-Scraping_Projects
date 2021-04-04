@@ -27,13 +27,11 @@ BaseSoupFind=BasePageSoup.find_all('a')
 for link in BaseSoupFind:
     url=link.get('href')
     lst.append(url)
-#lst
 
 LangSelect=lst[4:16] # List for language selection (Optional Implementation)
 CountriesURLsList=lst[17:-25] #List of Countries (destination URLs)
 
 # List of country names to save images in their respective folders
-
 for nm in CountriesURLsList:
     nam=nm.split("/")
     Name=nam[-1]
